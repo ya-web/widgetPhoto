@@ -1,0 +1,12 @@
+**Comment ça fonctionne :
+
+Le point d'entrée de l'application est App.js
+
+En fonction du mode d'affichage, soit eFlore ("affichage=organes" en paramètre), ou par défaut, "gallerie", on charge la classe correspondante (Organs.js ou Gallery.js), qui elle même va faire appel à Index.js pour charger:
+_ Les templates correspondants disponibles dans Utils.js (avec toutes les fonctions utiles/communes dans l'application), vers index.html
+_ ImagesService.js : Chargement des images et métadonnées
+_ Carrousel.js: Le carrousel d'images/métadonnées et autres fonctionnalité, soit en "overlay" au clic sur une image (affichage gallerie), soit immédiatement sous les image avec la première affichée par défaut (par organes)
+_ Search.js : La recherche si nécessaire
+_ Contact.js : L'affichage du formulaire de contact est réalisé
+
+Toutes les données configurables en fonction de l'environnement sont à rendre disponibles dans dans un fichier Config.js (voir README.md).
